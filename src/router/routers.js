@@ -1,5 +1,5 @@
 import Main from '@/components/main'
-import parentView from '@/components/parent-view'
+// import parentView from '@/components/parent-view'
 
 /**
  * iview-admin中meta除了原生参数外可配置的参数:
@@ -153,6 +153,25 @@ export default [
           access: ['audit:list']
         },
         component: () => import('@/view/upms/sys-logs.vue')
+      },
+      {
+        path: 'dynamic-form',
+        name: 'dynamic-form',
+        meta: {
+          icon: 'md-bookmarks',
+          title: '动态表格'
+        },
+        component: () => import('@/view/upms/dynamic-form.vue')
+      },
+      {
+        path: 'frame',
+        name: 'iframe',
+        meta: {
+          icon: 'md-bookmarks',
+          title: 'iframe',
+          src: 'http://127.0.0.1:7400/api/druid/index.html'
+        },
+        component: () => import('@/view/components/frame/frame.vue')
       }
     ]
   },
